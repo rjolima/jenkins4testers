@@ -12,7 +12,7 @@ pipeline{
         }
         stage("Tests"){
             steps {
-                sh "bundle exec cucumber -p ci" // Linus executar com bandle
+                sh "echo 'simulando'" // Linus executar com bandle
             }
         }
     }
