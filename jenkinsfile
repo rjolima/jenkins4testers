@@ -1,14 +1,21 @@
 pipeline{
-    agent any
+    agent {
+        docker{
+            image "ruby:alpine"
+            args "--network=skynet"
+        }
+    }
     stages{
         stage("Build"){
             steps{
-                sh "echo 'simulnado um build'"
+                sh "chmod +x build/alpine.sh"
+                sh "./buil/alpine.sh"
+                sh "bundle install"
             }
         }
         stage("Tests"){
             steps {
-                sh "echo 'simulando um teste automatizado'"
+                sh "bundle exec cucumber -p ci" // Linus executar com bandle
             }
         }
     }
