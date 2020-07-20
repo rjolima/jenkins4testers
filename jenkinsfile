@@ -2,13 +2,13 @@ pipeline{
     agent {
         docker{
             image "ruby:alpine"
-            
+            args "--network=skynet"
         }
     }
     stages{
         stage("Build"){
             steps{
-                sh "chmod build/alpine.sh" // +x vai dar permissão de execução - linux
+                sh "chmod +x build/alpine.sh" // +x vai dar permissão de execução - linu
                 sh "./build/alpine.sh" // vai executar o alpine
                 sh "bundle install"
             }
