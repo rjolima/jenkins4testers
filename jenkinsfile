@@ -9,7 +9,7 @@ pipeline{
         stage("Build"){
             steps{
                 sh "chmod +x build/alpine.sh" // +x vai dar permissão de execução - linux
-                sh "./buil/alpine.sh" // vai executar o alpine
+                sh "./build/alpine.sh" // vai executar o alpine
                 sh "bundle install"
             }
         }
