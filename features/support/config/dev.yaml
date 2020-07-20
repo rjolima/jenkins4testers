@@ -1,5 +1,5 @@
 ---
-url: "http://nflix-web:8080"
+url: "http://nflix-web:8000"
 database:
   host: "pgdb"
   dbname: "nflix"
@@ -10,4 +10,4 @@ api:
 users:
   cat_manager:
     email: "tony@stark.com"
-    pass: "pwd123"
+    pass: "pwd456"

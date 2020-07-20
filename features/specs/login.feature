@@ -7,7 +7,7 @@ Funcionalidade: Login
 
     @login_happy
     Cenario: Acesso
-        Quando eu faço login com "tony@stark.com" e "pwd123"
+        Quando eu faço login com "tony@stark.com" e "pwd456"
         Então devo ser autenticado
         E devo ver "Tony Stark" na área logada
 
