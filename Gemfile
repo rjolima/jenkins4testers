@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "capybara", "~> 3.22.0"
+gem "capybara", "~> 3.33.0"
 gem "cucumber", "~> 3.1.2"
 gem "os", "1.0.1"
 gem "pg", "1.1.4"
