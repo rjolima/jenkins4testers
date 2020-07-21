@@ -1,7 +1,7 @@
 ---
 default: -p dev_toolbox -p headless -p html -p pretty # estou falando para cucumber que esse é o parâmetro default.
 #sem usar o parâmetro: cucumber -t @login_happy (ex) -p dev_toolbox.
-ci: -p dev -p headless -p json -p pretty # esse parâmetro é fundamental para rodar dentro de uma ferramenta de continuous integration
+ci: -p dev_toolbox -p headless -p json -p pretty # esse parâmetro é fundamental para rodar dentro de uma ferramenta de continuous integration
 # para rodar: cucumber -t @login_happy -p ci
 dev: ENV_TYPE=dev # so dv
 dev_toolbox: ENV_TYPE=dev_toolbox # desenv com dev toolbox
