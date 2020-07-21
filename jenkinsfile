@@ -8,8 +8,8 @@ pipeline {
     stages{
         stage("Build") {
             steps{
-                sh "chmod +x script/alpine.sh" // +x vai dar permissão de execução - linu
-                sh "./script/alpine.sh" // vai executar o alpine
+                sh "chmod +x build/alpine.sh" // +x vai dar permissão de execução - linu
+                sh "./build/alpine.sh" // vai executar o alpine
                 sh "bundle install"
             }
         }
