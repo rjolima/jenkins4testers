@@ -5,11 +5,16 @@ require "os"
 
 require_relative "helpers"
 
-World(Helpers)
+World(Helpers) #todos os recursos do módulo helpers são nativos dentro da execução do cucumber,
+# dessa forma get_token é método nativo e vai ser executado de qq lugar basta acessar step definition e substituir a variável token.
+# para get_token
 
+#variável de ambiente global
 CONFIG = YAML.load_file(File.join(Dir.pwd, "features/support/config/#{ENV["ENV_TYPE"]}.yaml"))
+#vai carregar as configurações de ambiente de acordo com informado em cucumber.yaml, da opção padrão que foi informado.
+# CONFIG em caixa alta faz dela uma variável global sendo acessada de qq lugar do projeto.
 
-case ENV["BROWSER"]
+case ENV["BROWSER"] # ENV - para obter uma variável de ambiente
 when "firefox"
   @driver = :selenium
 when "chrome"
@@ -26,11 +31,11 @@ when "headless"
   end
   @driver = :selenium_chrome_headless
 else
-  puts "Invalid browser"
+  puts "invalid Browser"
 end
 
 Capybara.configure do |config|
   config.default_driver = @driver
-  config.app_host = CONFIG["url"]
-  config.default_max_wait_time = 10
+  config.app_host = CONFIG["url"] #já tem a url que é o cucumber.yaml
+  config.default_max_wait_time = 13
 end

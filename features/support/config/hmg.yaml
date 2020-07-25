@@ -1,16 +1,8 @@
----
-url: "http://nflix.papito.io"
-database:
-  host: "104.237.137.68"
+--- 
+url: "http://hmg.nflix.com"
+database: 
+  host: "10.20.10.5"
   dbname: "nflix"
   user: "postgres"
-  password: "qaninja"
-api:
-  movies: "http://api.nflix.papito.io:3002"
-users:
-  cat_manager:
-      email: "tony@stark.com"
-      pass: "pwd456"
-  admin:
-      email: "admin@nflix.com"
-      pass: "admin123"
+  password: "qaninja-hmg"
+#so exemplo de ambiente de homologação
